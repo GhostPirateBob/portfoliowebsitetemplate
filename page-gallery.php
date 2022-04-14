@@ -1,38 +1,43 @@
-<?php get_header(); 
+<?php get_header(); ?>
 
-$disclaimer = get_field('disclaimer');
-
-?>
-
-<div id="fixed-img" style="background-image: url('<?php the_field('fixed_image'); ?>');" class="grid-y align-center" role="img" aria-label="this is how you make art">
-
-    <h2 class="cell"><?php echo the_field('heading') ?></h2>
+<div id="fixed-img" class="grid-y align-center" role="img"
+            aria-label="">
+            <h2 id="top" class="cell text-center">Lorem
+                ipsum</h2>
 
 </div>
 
-<main id="main" class="grid-y">
+<main class="grid-y">
 
-    <ul class="cell grid-x text-center menu align-center" data-tabs id="tabs">
-        <li class="cell small-6 medium-2 large-shrink tabs-title is-active"><a aria-selected="true" href="#panel1">
+
+    <ul class="cell grid-x text-center menu align-center" data-tabs
+        id="tabs">
+        <li class="cell small-6 medium-2 large-shrink tabs-title
+            is-active"><a href="#panel1">
                 <h3>Film</h3>
             </a></li>
-        <li class="cell small-6 medium-2 large-shrink tabs-title"><a data-tabs-target="panel2"
+        <li class="cell small-6 medium-2 large-shrink tabs-title"><a
+                data-tabs-target="panel2"
                 href="#panel2">
                 <h3>Theatre</h3>
             </a></li>
-        <li class="cell small-6 medium-2 large-shrink tabs-title"><a data-tabs-target="panel3"
+        <li class="cell small-6 medium-2 large-shrink tabs-title"><a
+                data-tabs-target="panel3"
                 href="#panel3">
                 <h3>Design</h3>
             </a></li>
-        <li class="cell small-6 medium-2 large-shrink tabs-title"><a data-tabs-target="panel4"
+        <li class="cell small-6 medium-2 large-shrink tabs-title"><a
+                data-tabs-target="panel4"
                 href="#panel4">
                 <h3>Poetry</h3>
             </a></li>
-        <li class="cell small-6 medium-2 large-shrink tabs-title"><a data-tabs-target="panel5"
+        <li class="cell small-6 medium-2 large-shrink tabs-title"><a
+                data-tabs-target="panel5"
                 href="#panel5">
                 <h3>Sculptures</h3>
             </a></li>
-        <li class="cell small-6 medium-2 large-shrink tabs-title"><a data-tabs-target="panel6"
+        <li class="cell small-6 medium-2 large-shrink tabs-title"><a
+                data-tabs-target="panel6"
                 href="#panel6">
                 <h3>Illustrations </h3>
             </a></li>
@@ -44,7 +49,8 @@ $disclaimer = get_field('disclaimer');
 
             <div class="grid-x align-right">
 
-                <ul class="cell sticky-ul grid-x small-12 medium-3 large-2 text-left
+                <ul class="cell sticky-ul grid-x small-12 medium-3
+                    large-2 text-left
                     vertical menu
                     align-top">
                     <li> <i class="cell text-left fi-thumbnails"></i></li>
@@ -58,7 +64,10 @@ $disclaimer = get_field('disclaimer');
                     </li>
                     <li><i class="fi-list"></i><a href="#independent">Independent
                             creations</a></li>
-                    <li class="cell small-8 medium-10  last"><?php echo $disclaimer ?></li>
+                    <li class="cell small-8 medium-12 last"> * Photoshop
+                        images are hand drawn, all work is
+                        drawn and illustrated by hand
+                        digital or not.</li>
                 </ul>
 
                 <div class="cell small-12 medium-9 large-10 grid-x
@@ -71,21 +80,17 @@ $disclaimer = get_field('disclaimer');
                         <a aria-label="Go to top" class="cell top-link
                             text-right" href="#tabs"><i
                                 class="fi-eject"></i></a>
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
 
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'storyboarding_films', 'posts_per_page' => -1));
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
 
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('storyboarding_films');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?>
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
 
                     </section>
 
@@ -98,22 +103,9 @@ $disclaimer = get_field('disclaimer');
                         <a aria-label="Go to top" class="cell top-link
                             text-right" href="#tabs"><i
                                 class="fi-eject"></i></a>
-                        
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'concepts_films', 'posts_per_page' => -1));
-
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('concepts_films');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?>        
-
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
                     </section>
 
                     <section class="cell grid-x
@@ -126,21 +118,9 @@ $disclaimer = get_field('disclaimer');
                         <a aria-label="Go to top" class="cell top-link
                             text-right" href="#tabs"><i
                                 class="fi-eject"></i></a>
-                        
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'independent_films', 'posts_per_page' => -1));
-
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('independent_films');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?>        
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
 
                     </section>
 
@@ -154,12 +134,16 @@ $disclaimer = get_field('disclaimer');
 
             <div class="grid-x align-right">
 
-                <ul class="cell sticky-ul grid-x small-12 medium-3 large-2 text-left
+                <ul class="cell sticky-ul grid-x small-12 medium-3
+                    large-2 text-left
                     vertical menu
                     align-top">
                     <li> <i class="cell text-left fi-thumbnails"></i></li>
                     <li>Theatre:</li>
-                    <li class="cell small-8 medium-10  last"><?php echo $disclaimer ?></li>
+                    <li class="cell small-8 medium-12 last"> * Photoshop
+                        images are hand drawn, all work is
+                        drawn and illustrated by hand
+                        digital or not.</li>
                 </ul>
 
                 <section class="cell small-12 medium-9 large-10 grid-x
@@ -170,21 +154,9 @@ $disclaimer = get_field('disclaimer');
                     <a aria-label="Go to top" class="cell top-link
                         text-right" href="#tabs"><i
                             class="fi-eject"></i></a>
-
-                    <?php
-                    $loop = new WP_Query(array('post_type' => 'theatre', 'posts_per_page' => -1));
-
-                    while ($loop->have_posts()) { $loop->the_post();
-
-                    ?>
-                    
-                    <?php
-                    $image = get_field('theatre');
-                    if (!empty($image)) : ?>
-                        <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-
-                    <?php } ?> 
+                    <img class="gallery"
+                        src="https://via.placeholder.com/500x500"
+                        alt="">
 
                 </section>
 
@@ -196,12 +168,16 @@ $disclaimer = get_field('disclaimer');
 
             <div class="grid-x align-right">
 
-                <ul class="cell sticky-ul grid-x small-12 medium-3 large-2 text-left
+                <ul class="cell sticky-ul grid-x small-12 medium-3
+                    large-2 text-left
                     vertical menu
                     align-top">
                     <li> <i class="cell text-left fi-thumbnails"></i></li>
                     <li>Design:</li>
-                    <li class="cell small-8 medium-10  last"><?php echo $disclaimer ?></li>
+                    <li class="cell small-8 medium-12 last"> * Photoshop
+                        images are hand drawn, all work is
+                        drawn and illustrated by hand
+                        digital or not.</li>
                 </ul>
 
                 <section class="cell small-12 medium-9 large-10 grid-x
@@ -212,21 +188,9 @@ $disclaimer = get_field('disclaimer');
                     <a aria-label="Go to top" class="cell top-link
                         text-right" href="#tabs"><i
                             class="fi-eject"></i></a>
-
-                    <?php
-                    $loop = new WP_Query(array('post_type' => 'designs', 'posts_per_page' => -1));
-
-                    while ($loop->have_posts()) { $loop->the_post();
-
-                    ?>
-                    
-                    <?php
-                    $image = get_field('designs');
-                    if (!empty($image)) : ?>
-                        <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                    <?php endif; ?>
-
-                    <?php } ?> 
+                    <img class="gallery"
+                        src="https://via.placeholder.com/500x500"
+                        alt="">
 
                 </section>
 
@@ -238,7 +202,8 @@ $disclaimer = get_field('disclaimer');
 
             <div class="grid-x align-right">
 
-                <ul class="cell sticky-ul grid-x small-12 medium-3 large-2 text-left
+                <ul class="cell sticky-ul grid-x small-12 medium-3
+                    large-2 text-left
                     vertical menu
                     align-top">
                     <li> <i class="cell text-left fi-thumbnails"></i></li>
@@ -251,7 +216,11 @@ $disclaimer = get_field('disclaimer');
                                     Poetry</a></li>
                         </ul>
                     </li>
-                    <li class="cell small-8 medium-10  last"><?php echo $disclaimer ?></li>
+                    <li class="cell small-8 medium-12 last"> * Photoshop
+                        images are hand drawn, all work
+                        is
+                        drawn and illustrated by hand
+                        digital or not.</li>
                 </ul>
 
                 <div class="cell small-12 medium-9 large-10 grid-x
@@ -264,21 +233,9 @@ $disclaimer = get_field('disclaimer');
                         <a aria-label="Go to top" class="cell top-link
                             text-right" href="#tabs"><i
                                 class="fi-eject"></i></a>
-
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'poems_poetry', 'posts_per_page' => -1));
-
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('poems_poetry');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?> 
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
 
                     </section>
 
@@ -292,21 +249,9 @@ $disclaimer = get_field('disclaimer');
                         <a aria-label="Go to top" class="cell top-link
                             text-right" href="#tabs"><i
                                 class="fi-eject"></i></a>
-
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'illustrated_poetry', 'posts_per_page' => -1));
-
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('illustrated_poetry');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?> 
+                        <img class="gallery"
+                            src="https://via.placeholder.com/500x500"
+                            alt="">
 
                     </section>
 
@@ -320,12 +265,16 @@ $disclaimer = get_field('disclaimer');
 
             <div class="grid-x align-right">
 
-                <ul class="cell sticky-ul grid-x small-12 medium-3 large-2 text-left
+                <ul class="cell sticky-ul grid-x small-12 medium-3
+                    large-2 text-left
                     vertical menu
                     align-top">
                     <li> <i class="cell text-left fi-thumbnails"></i></li>
                     <li>Sculptures:</li>
-                    <li class="cell small-8 medium-10  last"><?php echo $disclaimer ?></li>
+                    <li class="cell small-8 medium-12 last"> * Photoshop
+                        images are hand drawn, all work is
+                        drawn and illustrated by hand
+                        digital or not.</li>
                 </ul>
 
                 <section class="cell small-12 medium-9 large-10 grid-x
@@ -336,21 +285,9 @@ $disclaimer = get_field('disclaimer');
                     <a aria-label="Go to top" class="cell top-link
                         text-right" href="#tabs"><i
                             class="fi-eject"></i></a>
-
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'sculptures', 'posts_per_page' => -1));
-
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('sculptures');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?> 
+                    <img class="gallery"
+                        src="https://via.placeholder.com/500x500"
+                        alt="">
 
                 </section>
 
@@ -362,12 +299,17 @@ $disclaimer = get_field('disclaimer');
 
             <div class="grid-x align-right">
 
-                <ul class="cell sticky-ul grid-x small-12 medium-3 large-2 text-left
+                <ul class="cell sticky-ul grid-x small-12 medium-3
+                    large-2 text-left
                     vertical menu
                     align-top">
                     <li> <i class="cell text-left fi-thumbnails"></i></li>
                     <li>Illustrations:</li>
-                    <li class="cell small-8 medium-10  last"><?php echo $disclaimer ?></li>
+                    <li class="cell small-8 medium-12 last"> * Photoshop
+                        images are hand drawn, all work
+                        is
+                        drawn and illustrated by hand
+                        digital or not.</li>
                 </ul>
 
                 <section class="cell small-12 medium-9 large-10 grid-x
@@ -378,21 +320,9 @@ $disclaimer = get_field('disclaimer');
                         top-link
                         text-right" href="#tabs"><i
                             class="fi-eject"></i></a>
-
-                        <?php
-                        $loop = new WP_Query(array('post_type' => 'illustrations', 'posts_per_page' => -1));
-
-                        while ($loop->have_posts()) { $loop->the_post();
-
-                        ?>
-                        
-                        <?php
-                        $image = get_field('illustrations');
-                        if (!empty($image)) : ?>
-                            <img class="gallery" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-
-                        <?php } ?> 
+                    <img class="gallery"
+                        src="https://via.placeholder.com/500x500"
+                        alt="">
 
                 </section>
 

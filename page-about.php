@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
-<main id="main" class="grid-container grid-y">
+<main class="grid-container grid-y">
 
-    <h2 class="cell text-center medium-text-right">Biography</h2>
+    <h2 class="cell text-center medium-text-right">Lorem
+        ipsum</h2>
 
     <i class="fi-pencil"></i>
 
@@ -10,19 +11,60 @@
 
         <div class="cell text-center medium-order-2 small-12 medium-6"
             data-sticky-container>
-            <div class="sticky" data-sticky data-margin-top="12"
+            <div class="sticky" data-sticky data-margin-top="6"
                 data-anchor="stick-1">
-                <?php
-                $image = get_field('sticky_image_1');
-                if (!empty($image)) { ?>
-                <img class="thumbnail" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <?php } ?>
+                <img class="thumbnail" width="378" height="378"
+                    src="https://via.placeholder.com/378" alt="">
             </div>
         </div>
 
-        <div id="stick-1" class="cell text-center medium-order-1 medium-text-left small-12 medium-6">
+        <div id="stick-1" class="cell text-center medium-order-1
+            medium-text-left small-12 medium-6">
 
-            <?php echo the_field('biography_1') ?>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
 
         </div>
 
@@ -32,20 +74,62 @@
 
         <div class="cell text-center small-12 medium-6"
             data-sticky-container>
-            <div class="sticky" data-sticky data-margin-top="12"
+            <div class="sticky" data-sticky data-margin-top="6"
                 data-anchor="stick-2">
-                <?php
-                $image = get_field('sticky_image_2');
-                if (!empty($image)) { ?>
-                <img class="thumbnail"  src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <?php } ?>
+                <img class="thumbnail" width="378" height="378"
+                    src="https://via.placeholder.com/378" alt="">
             </div>
         </div>
 
-        <div id="stick-2" class="cell text-center medium-text-right small-12 medium-6">
+        <div id="stick-2" class="cell text-center medium-text-right
+            small-12
+            medium-6">
 
-            <?php echo the_field('biography_2') ?>
-           
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+
         </div>
 
     </div>
@@ -55,26 +139,25 @@
         <div class="cell small-12 medium-5 card">
 
             <div class="card-divider">
-                <?php echo the_field('card_title') ?>
+                Lorem ipsum
             </div>
 
-            <?php
-            $image = get_field('portrait');
-            if (!empty($image)) { ?>
-            <img  src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-            <?php } ?>
+            <img width="585" height="585"
+                src="https://via.placeholder.com/378x504" alt="">
 
             <div class="card-section">
 
-                <h3>  <?php echo the_field('card_heading') ?></h3>
-                <p> <?php echo the_field('card_paragraph') ?> </p>
-
+                <h3>Lorem</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. </p>
             </div>
 
         </div>
 
     </section>
 
-</main>    
-	
+</main>
+
 <?php get_footer(); ?>

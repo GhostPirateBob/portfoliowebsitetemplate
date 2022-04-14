@@ -3,15 +3,15 @@
   <body>
     
   <?php
-
+      /*
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+        
         $first_name = $_REQUEST["first-name"];
         $last_name = $_REQUEST["last-name"];
         $email = $_REQUEST["email"];
         $phone = $_REQUEST["phone"];
         $text = $_REQUEST["text"];
-        $to_email = "shlooby07@gmail.com";
+        $to_email = "";
         $subject = "New Employment Form Message";
         $contactus = "
         You have a message from the Employment Form on your website:
@@ -29,10 +29,10 @@
         }
         
       }
-
+      */
   ?>
 
-  <?php echo $res; ?>  
+  <?php /*echo $res;*/ ?>  
 
   </body>
 </html>

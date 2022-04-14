@@ -1,11 +1,3 @@
 /* not found */
 
 @import 'variables';
-
-main {
-    @extend %h1;
-    @extend %submit;
-    a {
-        @extend %link;
-    }
-}

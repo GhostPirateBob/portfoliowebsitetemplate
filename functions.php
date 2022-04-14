@@ -4,9 +4,9 @@ if (!isset($content_width)) {
     $content_width = 1920;
 }
 
-if (!function_exists('foundation_setup')) {
+if (!function_exists('portfolio_website_template_setup')) {
 
-    function foundation_setup()
+    function portfolio_website_template_setup()
     {
         register_nav_menus(
             array(
@@ -26,9 +26,9 @@ if (!function_exists('foundation_setup')) {
         add_theme_support('menus');
     }
 }
-add_action('after_setup_theme', 'foundation_setup');
+add_action('after_setup_theme', 'portfolio_website_template_setup');
 
-function foundation_scripts()
+function portfolio_website_template_scripts()
 {
 
     //foundation 6 for sites and icons
@@ -74,9 +74,9 @@ function foundation_scripts()
         wp_enqueue_style('notfound-css', get_template_directory_uri() . '/assets/css/notfound.css');
     }
 }
-add_action('wp_enqueue_scripts', 'foundation_scripts');
+add_action('wp_enqueue_scripts', 'portfolio_website_template_scripts');
 
-function foundation_custom_sidebars()
+function portfolio_website_template_custom_sidebars()
 {
     register_sidebar(
         array(
@@ -89,7 +89,7 @@ function foundation_custom_sidebars()
         )
     );
 }
-add_action('widgets_init', 'foundation_custom_sidebars');
+add_action('widgets_init', 'portfolio_website_template_custom_sidebars');
 
 /*
 add_filter('pre_option_upload_path', function ($upload_path) {
@@ -102,33 +102,33 @@ add_filter('pre_option_upload_url_path', function ($upload_url_path) {
 
 add_filter( 'option_uploads_use_yearmonth_folders', '__return_false', 100 );
 
-function foundation_remove_admin_menus() {
+function portfolio_website_template_remove_admin_menus() {
     remove_menu_page( 'edit.php' );
     remove_menu_page( 'edit-comments.php' );
 }
-add_action( 'admin_menu', 'foundation_remove_admin_menus' );
+add_action( 'admin_menu', 'portfolio_website_template_remove_admin_menus' );
 
-function foundation_enable_vcard_upload($mime_types)
+function portfolio_website_template_enable_vcard_upload($mime_types)
 {
     $mime_types['vcf'] = 'text/vcard';
     $mime_types['vcard'] = 'text/vcard';
     return $mime_types;
 }
-add_filter('upload_mimes', 'foundation_enable_vcard_upload');
+add_filter('upload_mimes', 'portfolio_website_template_enable_vcard_upload');
 
-function foundation_submit_form_1()
+function portfolio_website_template_submit_form_1()
 {
 
     require_once(get_template_directory() . '/inc/form-1.php');
 
     exit();
 }
-add_action('wp_ajax_submit_form_1', "foundation_submit_form_1");
-add_action('wp_ajax_nopriv_submit_form_1', 'foundation_submit_form_1');
+add_action('wp_ajax_submit_form_1', "portfolio_website_template_submit_form_1");
+add_action('wp_ajax_nopriv_submit_form_1', 'portfolio_website_template_submit_form_1');
 
 
 
-function foundation_register_cptui()
+function portfolio_website_template_register_cptui()
 {
 
     $labels = [
@@ -164,12 +164,12 @@ function foundation_register_cptui()
     register_post_type("storyboarding_films", $args);
 
 }
-add_action('init', 'foundation_register_cptui');
+add_action('init', 'portfolio_website_template_register_cptui');
 */
 
-function foundation_on_theme_activation()
+function portfolio_website_template_on_theme_activation()
 {
-    function foundation_post_meta($id, $key, $val)
+    function portfolio_website_template_post_meta($id, $key, $val)
     {
         add_post_meta($id, $key, $val, true);
     }
@@ -185,8 +185,8 @@ function foundation_on_theme_activation()
         $id = wp_insert_post($page);
         update_option('page_on_front', $id);
         update_option('show_on_front', 'page');
-        //foundation_post_meta($id, 'heading', 'Portfolio website');
-        //foundation_post_meta($id, '_heading', 'heading'); 
+        //portfolio_website_template_post_meta($id, 'heading', 'Portfolio website');
+        //portfolio_website_template_post_meta($id, '_heading', 'heading'); 
     }
 
     if (!get_page_template_slug(256)) {
@@ -199,8 +199,8 @@ function foundation_on_theme_activation()
             'page_template' => 'page-about.php',
         );
         $id = wp_insert_post($page);
-        //foundation_post_meta($id, 'heading', 'Biography');
-        //foundation_post_meta($id, '_heading', 'heading');
+        //portfolio_website_template_post_meta($id, 'heading', 'Biography');
+        //portfolio_website_template_post_meta($id, '_heading', 'heading');
     }
 
     if (!get_page_template_slug(257)) {
@@ -213,8 +213,8 @@ function foundation_on_theme_activation()
             'page_template' => 'page-contact.php',
         );
         $id = wp_insert_post($page);
-        //foundation_post_meta($id, 'heading', 'Get in touch');
-        //foundation_post_meta($id, '_heading', 'heading');
+        //portfolio_website_template_post_meta($id, 'heading', 'Get in touch');
+        //portfolio_website_template_post_meta($id, '_heading', 'heading');
     }
 
     if (!get_page_template_slug(258)) {
@@ -227,8 +227,8 @@ function foundation_on_theme_activation()
             'page_template' => 'page-gallery.php',
         );
         $id = wp_insert_post($page);
-        //foundation_post_meta($id, 'heading', 'Portfolio of work');
-        //foundation_post_meta($id, '_heading', 'heading');
+        //portfolio_website_template_post_meta($id, 'heading', 'Portfolio of work');
+        //portfolio_website_template_post_meta($id, '_heading', 'heading');
     }
 }
-add_action('after_switch_theme', 'foundation_on_theme_activation');
+add_action('after_switch_theme', 'portfolio_website_template_on_theme_activation');

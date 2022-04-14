@@ -1,0 +1,38 @@
+@import "variables";
+/* about */
+
+.active {
+    @extend %active;
+}
+
+#stick-1 {
+    @include medium_and_up() {
+        @include box(null, 0 1rem 0 0 );
+    }
+}
+
+#stick-2  {
+    @include medium_and_up() {
+        @include box(null, 0 0 0 1rem);
+    }
+}
+
+.card {
+    background-color: rgba($color6, 0.1);
+    border-radius: 5px;
+    .card-divider {
+        background-color: rgba($color6, 0.1);
+        font-size: larger;
+        color: $color1;
+    }
+    img {
+        @include setbox(100%, null, null, auto);
+        @include medium_and_up() {
+            border-radius: 2px;
+            @include setbox(77.859%, null, null, 1.5rem auto auto auto);
+        }
+    }
+    h3 {
+        font-size: 19.2px;
+    }
+}

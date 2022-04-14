@@ -1,0 +1,64 @@
+/* template */
+
+body {
+    max-width: 1920px;
+    @include setbox(null, null, null, auto);
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -999;
+        background-blend-mode: screen;
+        opacity: 0.35;
+        background-color: rgba($color3, 0.125);
+        background-image: url(../../images/template/body-mobile.jpg);
+        @include large_and_up {
+            background-image: url(../../images/template/body.jpg);
+        }
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+}
+
+h1 {
+    font-size: inherit;
+    @include box();
+}
+
+h2 {
+    @include setbox(null, null, null, 1rem auto);
+    color: darkShift($color1);
+    font-style: oblique;
+    text-shadow: 0 0 2.5px $color1;
+    @include medium_and_up() {
+        @include setbox(null, null, null, 50px auto);
+    }
+}
+
+h3,
+h4,
+h5 {
+    color: darkShift($color1);
+}
+
+main {
+    min-height: 78.92vh;
+    @include medium_and_up() {
+        > * {
+            margin-bottom: 50px;
+        }
+    }
+    i {
+        color: $color1;
+    }
+}
+
+@import "./header";
+
+@import "./footer";

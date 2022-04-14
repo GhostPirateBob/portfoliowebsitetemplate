@@ -1,0 +1,333 @@
+.sticky-ul li a {
+  color: #4E7F3D;
+}
+.sticky-ul li a:hover, .sticky-ul li a:focus {
+  color: #566CAE;
+}
+
+.active {
+  text-shadow: 0.25px 0 0 #2b241d;
+}
+
+/* template */
+body {
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+}
+body::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+  background-blend-mode: screen;
+  opacity: 0.35;
+  background-color: rgba(225, 202, 111, 0.125);
+  background-image: url(../../images/template/body-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+@media screen and (min-width: 64em) {
+  body::before {
+    background-image: url(../../images/template/body.jpg);
+  }
+}
+
+h1 {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 1rem auto;
+  color: #493e32;
+  font-style: oblique;
+  text-shadow: 0 0 2.5px #2b241d;
+}
+@media screen and (min-width: 40em) {
+  h2 {
+    margin: 50px auto;
+  }
+}
+
+h3,
+h4,
+h5 {
+  color: #493e32;
+}
+
+main {
+  min-height: 78.92vh;
+}
+@media screen and (min-width: 40em) {
+  main > * {
+    margin-bottom: 50px;
+  }
+}
+main i {
+  color: #2b241d;
+}
+
+.top-bar {
+  background-image: url(../../images/template/paper.png);
+  background-color: #e1ca6f;
+  background-blend-mode: screen;
+}
+.top-bar .top-bar-right ul {
+  background: transparent;
+}
+.top-bar .top-bar-right ul li a {
+  color: #2b241d;
+  padding: 0.5rem;
+}
+.top-bar .top-bar-right ul li a:hover, .top-bar .top-bar-right ul li a:focus {
+  color: #f8f8ff;
+  text-shadow: none;
+}
+
+.title-bar {
+  background-image: url(../../images/template/paper.png);
+  background-blend-mode: screen;
+  background-color: #e1ca6f;
+}
+.title-bar .title-bar-title,
+.title-bar .menu-icon {
+  color: #f8f8ff;
+}
+
+footer {
+  background-image: url(../../images/template/paper.png);
+  background-blend-mode: screen;
+  padding-top: 15px;
+  background-color: #e1ca6f;
+  color: #2b241d;
+  position: relative;
+  z-index: 0;
+}
+footer li a {
+  color: #2b241d;
+  padding: 0.5rem;
+}
+footer li a:hover, footer li a:focus {
+  color: #f8f8ff;
+}
+footer .widget {
+  margin: 20px auto;
+}
+footer .widget input,
+footer .widget button,
+footer .widget label {
+  color: #2b241d;
+  height: 40px;
+  padding: 5px;
+  margin: 0;
+}
+footer .widget input,
+footer .widget button {
+  cursor: pointer;
+}
+footer .widget button {
+  background-color: rgba(75, 124, 106, 0.5);
+}
+footer .widget button:hover, footer .widget button:focus {
+  background-color: rgba(78, 127, 61, 0.5);
+}
+footer .widget input {
+  background-color: rgba(248, 248, 255, 0.15);
+}
+footer .widget label {
+  display: inline-block;
+}
+footer .widget ul li {
+  list-style-type: none;
+}
+footer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(../../images/template/washi.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* gallery */
+#fixed-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media screen and (min-width: 64em) {
+  #fixed-img {
+    background-attachment: fixed;
+  }
+}
+#fixed-img h2 {
+  background-image: url(../../images/template/paper.png);
+  width: fit-content;
+  height: fit-content;
+  padding: 0 1rem;
+  margin: 1rem auto 250px auto;
+}
+@media screen and (min-width: 40em) {
+  #fixed-img h2 {
+    background-color: #f8f8ff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 460px auto auto auto;
+  }
+}
+@media screen and (min-width: 64em) {
+  #fixed-img h2 {
+    margin: calc(100vh - 172px) auto auto auto;
+  }
+}
+
+#tabs {
+  height: fit-content;
+  border-top: 1px solid #f8f8ff;
+}
+@media screen and (min-width: 64em) {
+  #tabs {
+    position: absolute;
+    z-index: 999;
+  }
+}
+#tabs li a {
+  background-color: #eada99;
+  background-image: url(../../images/template/paper.png);
+  background-blend-mode: screen;
+  outline: none;
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  margin: 0;
+}
+#tabs li a h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+@media screen and (min-width: 64em) {
+  #tabs li a h3 {
+    font-size: 21.5px;
+  }
+}
+@media screen and (min-width: 64em) {
+  #tabs li:nth-child(1) a {
+    border-bottom-left-radius: 10px;
+  }
+}
+@media screen and (min-width: 64em) {
+  #tabs li:nth-child(6) a {
+    border-bottom-right-radius: 10px;
+  }
+}
+#tabs .tabs-title.is-active a {
+  background-color: #2b241d;
+  background-image: none;
+}
+#tabs .tabs-title.is-active a h3 {
+  color: #f8f8ff;
+}
+
+.tabs-content {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.tabs-content .tabs-panel.is-active {
+  min-height: 79vh;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 40em) {
+  .tabs-content .tabs-panel.is-active {
+    position: relative;
+  }
+  .tabs-content .tabs-panel.is-active::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 75%;
+    bottom: 0;
+    left: 0;
+    background-image: url(../../images/gallery/side-1.png);
+    border-right: 1px solid #f8f8ff;
+  }
+}
+@media screen and (min-width: 40em) and (min-width: 64em) {
+  .tabs-content .tabs-panel.is-active::before {
+    right: 83.34%;
+  }
+}
+
+.sticky-ul {
+  background-image: url(../../images/gallery/side.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+  color: #2b241d;
+  height: 221px;
+  padding: 1rem 1rem 0 1rem;
+  font-size: 14.5px;
+}
+@media screen and (min-width: 40em) {
+  .sticky-ul {
+    position: sticky;
+    top: 0;
+  }
+}
+.sticky-ul li a {
+  margin: 0;
+  padding: 0;
+}
+.sticky-ul li:nth-child(1) {
+  margin-bottom: 0.5rem;
+}
+.sticky-ul li:nth-child(2)::first-line {
+  text-decoration: underline;
+}
+.sticky-ul li.last {
+  font-size: 12.5px;
+  color: #717171;
+}
+.sticky-ul .fi-list {
+  font-size: 11px;
+}
+
+section h4 {
+  color: #2b241d;
+  margin: 1rem 2rem 0 0;
+}
+section .top-link {
+  position: sticky;
+  top: 0;
+  margin: 0 2rem 0 0;
+}
+section .top-link i {
+  font-size: medium;
+  color: #4B7C6A;
+}
+section .top-link i:hover, section .top-link i:focus {
+  color: #e1ca6f;
+}
+section .gallery {
+  padding: 2.5rem;
+}
+@media screen and (min-width: 40em) {
+  section .gallery {
+    padding: 2.5rem 5rem;
+  }
+}
+
+/*# sourceMappingURL=gallery.css.map */

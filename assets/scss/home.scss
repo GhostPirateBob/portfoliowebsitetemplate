@@ -1,0 +1,71 @@
+@import "variables";
+/* home */
+
+.active {
+    @extend %active;
+}
+
+#orbit-heading {
+    @include medium_and_up() {
+        @include setbox(null, null, 0 1rem, 50px auto 1rem auto);
+    }
+    @include g_container() {
+        @include setbox(1200px, null, null, null);
+    }
+}
+
+.orbit {
+    max-width: 1200px;
+    @include setbox(null, null, null, auto);
+    .orbit-container img {
+        max-height: 700px;
+    }
+}
+
+.media-object {
+    @include medium_and_up() {
+        @include setbox(null, null, null, auto);
+    }
+    .media-object-section:nth-child(2) img {
+        @include setbox(100%, null, null, null);
+        border-radius: 10px;
+    }
+    .media-object-section {
+        &:nth-child(1) {
+            @include setbox(null, null, 0, null);
+            @include medium_and_up() {
+                @include setbox(null, null, 1rem, 1rem);
+            }
+        }
+        &:nth-child(2) {
+            @include setbox(null, null, 0 2%, null);
+            @include medium_and_up() {
+                @include setbox(null, null, 0 0 0 2rem, null);
+                @include large_and_up() {
+                    @include setbox(null, null, 3%, null);
+                }
+            }
+        }
+    }
+}
+
+.p-left,
+.p-right {
+    p {
+        @include medium_and_up {
+            @include setbox(null, null, 0 1rem 3rem 1rem, 0);
+        }
+    }
+    h4 {
+        @include medium_and_up {
+            @include setbox(null, null, 2rem 1rem 0 1rem, null);
+        }
+    }
+}
+
+.p-left {
+    @include medium_and_up {
+        box-shadow: 0 -1px rgba($color1, 0.1);
+        @include box(null, 2.5rem 0 0 0);
+    }
+}

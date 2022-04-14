@@ -1,0 +1,16 @@
+$color1: #2b241d;
+$color2: #566CAE;
+$color3: #e1ca6f;
+$color4: #4B7C6A;
+$color5: #4E7F3D;
+$color6: #8a8a8a;
+
+$white: #f8f8ff;
+
+$transparent: transparent;
+
+@import "partials/breakpoints";
+@import "partials/functions&mixins";  
+@import "partials/placeholders";
+
+@import "template/styles";

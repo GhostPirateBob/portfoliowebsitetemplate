@@ -1,0 +1,27 @@
+@mixin box( $a: 0, $b: 0) {
+    margin: $a;
+    padding: $b;
+}
+
+@mixin setbox($width, $height, $padding, $margin) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+}
+
+@function darkShift($color) {
+    @if (lightness($color) > 25%) {
+        @return darken($color, 10%);
+    } @else {
+        @return lighten($color, 10%);
+    }
+}
+
+@function lightShift($color) {
+    @if (lightness($color) > 60%) {
+        @return lighten($color, 10%);
+    } @else {
+        @return darken($color, 10%);
+    }
+}

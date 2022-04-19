@@ -53,9 +53,9 @@
                     large-2 text-left
                     vertical menu
                     align-top">
-                    <li> <i class="cell text-left fi-thumbnails"></i></li>
+                    <li> <i class="fi-thumbnails"></i></li>
                     <li>Productions:
-                        <ul class="nested vertical bullet menu">
+                        <ul class="nested vertical menu">
                             <li><i class="fi-list"></i><a
                                     href="#storyboard">Storyboarding</a></li>
                             <li><i class="fi-list"></i><a
@@ -206,9 +206,9 @@
                     large-2 text-left
                     vertical menu
                     align-top">
-                    <li> <i class="cell text-left fi-thumbnails"></i></li>
+                    <li> <i class="fi-thumbnails"></i></li>
                     <li>Poetry:
-                        <ul class="nested vertical bullet menu">
+                        <ul class="nested vertical menu">
                             <li><i class="fi-list"></i><a
                                     href="#poetry">Poems</a></li>
                             <li><i class="fi-list"></i><a

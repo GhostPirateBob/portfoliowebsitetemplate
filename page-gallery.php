@@ -138,7 +138,7 @@
                     large-2 text-left
                     vertical menu
                     align-top">
-                    <li> <i class="cell text-left fi-thumbnails"></i></li>
+                    <li> <i class="fi-thumbnails"></i></li>
                     <li>Theatre:</li>
                     <li class="cell small-8 medium-12 last"> * Photoshop
                         images are hand drawn, all work is
@@ -172,7 +172,7 @@
                     large-2 text-left
                     vertical menu
                     align-top">
-                    <li> <i class="cell text-left fi-thumbnails"></i></li>
+                    <li> <i class="fi-thumbnails"></i></li>
                     <li>Design:</li>
                     <li class="cell small-8 medium-12 last"> * Photoshop
                         images are hand drawn, all work is
@@ -269,7 +269,7 @@
                     large-2 text-left
                     vertical menu
                     align-top">
-                    <li> <i class="cell text-left fi-thumbnails"></i></li>
+                    <li> <i class="fi-thumbnails"></i></li>
                     <li>Sculptures:</li>
                     <li class="cell small-8 medium-12 last"> * Photoshop
                         images are hand drawn, all work is
@@ -303,7 +303,7 @@
                     large-2 text-left
                     vertical menu
                     align-top">
-                    <li> <i class="cell text-left fi-thumbnails"></i></li>
+                    <li> <i class="fi-thumbnails"></i></li>
                     <li>Illustrations:</li>
                     <li class="cell small-8 medium-12 last"> * Photoshop
                         images are hand drawn, all work

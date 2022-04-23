@@ -9,7 +9,7 @@
 
     <div class="grid-x">
 
-        <div class="cell text-center medium-order-2 small-12 medium-6"
+        <div class="cell text-center medium-order-2 small-12 medium-5 large-6"
             data-sticky-container>
             <div class="sticky" data-sticky data-margin-top="6"
                 data-anchor="stick-1">
@@ -19,7 +19,7 @@
         </div>
 
         <div id="stick-1" class="cell text-center medium-order-1
-            medium-text-left small-12 medium-6">
+            medium-text-left small-12 medium-7 large-6">
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -72,7 +72,7 @@
 
     <div class="grid-x">
 
-        <div class="cell text-center small-12 medium-6"
+        <div class="cell text-center small-12 medium-5 large-6"
             data-sticky-container>
             <div class="sticky" data-sticky data-margin-top="6"
                 data-anchor="stick-2">
@@ -83,7 +83,7 @@
 
         <div id="stick-2" class="cell text-center medium-text-right
             small-12
-            medium-6">
+            medium-7 large-6">
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -136,7 +136,7 @@
 
     <section class="grid-x align-center">
 
-        <div class="cell small-12 medium-5 card">
+        <div class="cell small-12 medium-7 large-5 card">
 
             <div class="card-divider">
                 Lorem ipsum
